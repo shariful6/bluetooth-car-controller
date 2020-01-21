@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#009688"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context=".UserManualActivity">
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="102dp"
+        android:layout_gravity="center"
+        android:layout_weight="0.5"
+        android:src="@drawable/ic_assignment_black_24dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="9dp"
+        android:layout_weight="0.4"
+        android:text="1. Go to bluetooth setting and turn on bluetooth."
+        android:textColor="#fff"
+        android:textSize="20dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:layout_weight="0.4"
+        android:text="2. Eanable bluetooth visibility and search for new bluetooth device."
+        android:textColor="#fff"
+        android:textSize="20dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="23dp"
+        android:layout_weight="0.4"
+        android:text="3. When you find bluetooth module HC 05 then select that module and conncet with the module. Use pin 1234 if required."
+        android:textColor="#fff"
+        android:textSize="20dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="73dp"
+        android:layout_weight="0.4"
+        android:text="4. After successfully connected with bluetooth module, Open this application and start controlling your arduino controll car."
+        android:textColor="#fff"
+        android:textSize="20dp" />
+
+
+</LinearLayout>
