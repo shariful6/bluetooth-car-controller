@@ -23,7 +23,6 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ToggleButton;
-
 import java.io.IOException;
 import java.util.Set;
 import java.util.UUID;
@@ -73,13 +72,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                    if (viewBtn.isChecked())
                    {
                        linearLayout.setVisibility(View.VISIBLE);
-                       Toast.makeText(MainActivity.this, "Page should be loaded", Toast.LENGTH_SHORT).show();
                        String address=ip.getText().toString();
                        webView.loadUrl(address);
                    }
                    else
                    {
-                       Toast.makeText(MainActivity.this, "Thanks", Toast.LENGTH_SHORT).show();
+
                        linearLayout.setVisibility(View.GONE);
                    }
                }
@@ -267,9 +265,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         catch(Exception e){}
     }
 
-
-
-
     @Override
     public void onClick(View v) {
 
@@ -302,6 +297,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         }
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
