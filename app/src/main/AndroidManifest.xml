@@ -16,9 +16,12 @@
         android:supportsRtl="true"
         android:usesCleartextTraffic="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".UserManualActivity"></activity>
-        <activity android:name=".PolicyActivity" />
-        <activity android:name=".AboutActivity" />
+        <activity android:name=".UserManualActivity"
+            android:parentActivityName=".MainActivity"></activity>
+        <activity android:name=".PolicyActivity"
+            android:parentActivityName=".MainActivity"/>
+        <activity android:name=".AboutActivity"
+            android:parentActivityName=".MainActivity"/>
         <activity android:name=".SplashScreen"
             android:theme="@style/AppTheme.Splash" >
             <intent-filter>
@@ -34,6 +37,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+
     </application>
 
 </manifest>

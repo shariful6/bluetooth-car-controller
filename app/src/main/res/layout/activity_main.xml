@@ -41,7 +41,7 @@
     <LinearLayout
         android:id="@+id/webLayoutID"
         android:layout_width="0dp"
-        android:layout_height="120dp"
+        android:layout_height="150dp"
         android:layout_marginTop="8dp"
         android:visibility="gone"
         android:background="#fff"
