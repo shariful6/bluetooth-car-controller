@@ -2,7 +2,6 @@ package com.shariful.bt_car_controller;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothSocket;
@@ -62,23 +61,35 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         viewBtn=findViewById(R.id.viewBtnID);
         linearLayout=findViewById(R.id.webLayoutID);
 
-        webView.setWebViewClient(new WebViewClient());
-        WebSettings webSettings = webView.getSettings();
-        webSettings.setJavaScriptEnabled(true);
+
 
            viewBtn.setOnClickListener(new View.OnClickListener() {
                @Override
                public void onClick(View v) {
+
                    if (viewBtn.isChecked())
                    {
-                       linearLayout.setVisibility(View.VISIBLE);
+
                        String address=ip.getText().toString();
-                       webView.loadUrl(address);
+                       if(address.isEmpty())
+                       {
+                           Toast.makeText(MainActivity.this, ""+"Enter IP Adress !!", Toast.LENGTH_LONG).show();
+                       }
+                       else
+                       {
+                           webView.setWebViewClient(new WebViewClient());
+                           WebSettings webSettings = webView.getSettings();
+                           webSettings.setJavaScriptEnabled(true);
+                           linearLayout.setVisibility(View.VISIBLE);
+                           webView.loadUrl(address);
+                       }
+
                    }
                    else
                    {
 
                        linearLayout.setVisibility(View.GONE);
+
                    }
                }
            });
@@ -261,7 +272,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         BluetoothDevice dispositivo = myBluetooth.getRemoteDevice(address);//connects to the device's address and checks if it's available
         btSocket = dispositivo.createInsecureRfcommSocketToServiceRecord(myUUID);//create a RFCOMM (SPP) connection
         btSocket.connect();
-        try { t1.setText("BT Name: "+name+"\nBT Address: "+address); }
+        try {
+            t1.setText("BT Name: "+name+"\nBT Address: "+address);
+             }
         catch(Exception e){}
     }
 
