@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        setTitle("Bluetooth Arduino Car Controller");
+        setTitle("Arduino BT Car Controller");
 
         seekBar=findViewById(R.id.seekbarID);
         seekTV=findViewById(R.id.valueOfSeekbarID);
